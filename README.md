@@ -1,7 +1,7 @@
 TSStringValidator
 =================
 
-Couple of classes which you can simply validate strings in the project
+Couple of classes which you can simply use to validate strings in the project
 
 What's inside
 ==================
