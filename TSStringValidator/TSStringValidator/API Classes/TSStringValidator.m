@@ -70,8 +70,8 @@ static TSStringValidator *_validator = nil;
     StringValidationResult result = StringValidationResultFailure;
     if (!item.stringValue)
         result = StringValidationResultFailure;
-    else if (item.stringValue.length == 0 && !item.allowsEmpty) {
-        result = StringValidationResultEmptyField;
+    else if (item.stringValue.length == 0) {
+        result = item.allowsEmpty ? StringValidationResultOK : StringValidationResultEmptyField;
     } else {
         TSStringValidatorPattern *pattern = [self _patternForIdentifier:item.patternIdentifier];
         BOOL valid = [_engine validateString:item.stringValue withPatternIdentifier:pattern.patternString];
