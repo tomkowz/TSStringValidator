@@ -76,8 +76,6 @@ static TSStringValidator *_validator = nil;
         TSStringValidatorPattern *pattern = [self _patternForIdentifier:item.patternIdentifier];
         BOOL valid = [_engine validateString:item.stringValue withPatternIdentifier:pattern.patternString];
         if (valid) result = StringValidationResultOK;
-        
-        return StringValidationResultOK;
     }
     return result;
 }

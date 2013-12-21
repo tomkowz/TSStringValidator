@@ -25,8 +25,8 @@
 {
     [TSStringValidator setSharedValidator:nil];
     _validator = [TSStringValidator new];
-    _pattern1 = [TSStringValidatorPattern patternWithString:@"[a-z]" identifier:@"characters"];
-    _pattern2 = [TSStringValidatorPattern patternWithString:@"[a-zA-Z]" identifier:@"characters2"];
+    _pattern1 = [TSStringValidatorPattern patternWithString:@"[a-z]*" identifier:@"characters"];
+    _pattern2 = [TSStringValidatorPattern patternWithString:@"[a-zA-Z]*" identifier:@"characters2"];
 
     [super setUp];
 }
