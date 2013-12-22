@@ -54,6 +54,12 @@ static TSStringValidator *_validator = nil;
     }
 }
 
+- (void)removePatterns:(NSArray *)patterns {
+    for (TSStringValidatorPattern *p in patterns) {
+        [self removePattern:p];
+    }
+}
+
 - (void)removePatternWithIdentifier:(NSString *)identifier {
     if (identifier) {
         TSStringValidatorPattern *pattern = [self _patternForIdentifier:identifier];

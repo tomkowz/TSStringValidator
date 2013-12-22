@@ -58,6 +58,12 @@ typedef enum {
 - (void)removePattern:(TSStringValidatorPattern *)pattern;
 
 /**
+ @define Remove patterns from validator
+ @abstract Method used to remove existing patterns
+ */
+- (void)removePatterns:(NSArray *)patterns;
+
+/**
  @define Remove pattern with identifier from validator
  @abstract Method remove pattern for passed identifier;
  @param identifier Identifier of pattern which will be removed

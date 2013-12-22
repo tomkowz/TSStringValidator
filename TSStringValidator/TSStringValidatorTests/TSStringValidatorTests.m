@@ -104,6 +104,15 @@
 }
 
 
+#pragma mark removePatterns:
+- (void)testThatPatternsShouldBeRemoved {
+    [_validator addPattern:_pattern1];
+    [_validator addPattern:_pattern2];
+    [_validator removePatterns:@[_pattern1, _pattern2]];
+    XCTAssertEqual(_validator.patterns.count, (NSUInteger)0, @"");
+}
+
+
 #pragma mark removePatterForIdentifier:
 - (void)testThatPatternShouldBeRemovedWithIdentifier {
     [_validator addPattern:_pattern1];
