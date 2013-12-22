@@ -67,9 +67,18 @@ typedef enum {
 
 /**
  @define Validate item
- @abstract Method used to validation item passed as method argument
+ @abstract Method used to validate item passed as method argument
  @param item TSStringValidatorItem to validate
  */
 - (StringValidationResult)validateItem:(TSStringValidatorItem *)item;
+
+/**
+ @define Validate string
+ @abstract Method used to validate string with pattern string.
+ @param string String to validate
+ @param patternString Regular Expression pattern
+ @param allowsEmpty determine if validator should allows empty strings
+ */
+- (StringValidationResult)validateString:(NSString *)string withPattern:(NSString *)patternString allowsEmpty:(BOOL)allowsEmpty;
 
 @end

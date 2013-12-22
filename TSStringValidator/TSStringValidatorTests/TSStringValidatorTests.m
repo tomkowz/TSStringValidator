@@ -141,4 +141,22 @@
 }
 
 
+#pragma mark - validateString:patternString:allowsEmpty:
+- (void)testThatStringShouldBeValidForPatternString {
+    XCTAssertEqual([_validator validateString:@"abc" withPattern:@"[a-c]+" allowsEmpty:NO], StringValidationResultOK, @"");
+}
+
+- (void)testThatStringShouldNotBeValidForPatternString {
+    XCTAssertEqual([_validator validateString:@"abcddd" withPattern:@"[a-c]+" allowsEmpty:NO], StringValidationResultFailure, @"");
+}
+
+- (void)testThatStringShouldNotBeValidBecauseOfEmptyField {
+    XCTAssertEqual([_validator validateString:@"" withPattern:@"[a-c]+" allowsEmpty:NO], StringValidationResultEmptyField, @"");
+}
+
+- (void)testThatStringShouldBeValidBecauseOfAllowsEmpty {
+    XCTAssertEqual([_validator validateString:@"" withPattern:@"[a-c]" allowsEmpty:YES], StringValidationResultOK, @"");
+}
+
+
 @end

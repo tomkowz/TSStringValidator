@@ -72,18 +72,35 @@ static TSStringValidator *_validator = nil;
     return exists;
 }
 
+
+#pragma mark - Validation
 - (StringValidationResult)validateItem:(TSStringValidatorItem *)item {
+    return [self validateItem:item withPattern:[self _patternForIdentifier:item.patternIdentifier]];
+}
+
+- (StringValidationResult)validateItem:(TSStringValidatorItem *)item withPattern:(TSStringValidatorPattern *)pattern {
+    if (!item || !pattern) {
+        return StringValidationResultFailure;
+    }
+    
     StringValidationResult result = StringValidationResultFailure;
     if (!item.stringValue)
         result = StringValidationResultFailure;
     else if (item.stringValue.length == 0) {
         result = item.allowsEmpty ? StringValidationResultOK : StringValidationResultEmptyField;
     } else {
-        TSStringValidatorPattern *pattern = [self _patternForIdentifier:item.patternIdentifier];
         BOOL valid = [_engine validateString:item.stringValue withPattern:pattern.patternString];
         if (valid) result = StringValidationResultOK;
     }
     return result;
+}
+
+- (StringValidationResult)validateString:(NSString *)string withPattern:(NSString *)patternString allowsEmpty:(BOOL)allowsEmpty {
+    static NSString *identifier = @"patternIdentifier";
+    TSStringValidatorItem *item = [TSStringValidatorItem itemWithString:string patternIdentifier:identifier allowsEmpty:allowsEmpty];
+    TSStringValidatorPattern *pattern = [TSStringValidatorPattern patternWithString:patternString identifier:identifier];
+    
+    return [self validateItem:item withPattern:pattern];
 }
 
 
