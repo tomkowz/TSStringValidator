@@ -45,6 +45,13 @@ typedef enum {
 - (void)addPattern:(TSStringValidatorPattern *)pattern;
 
 /**
+ @define Add patterns to validator
+ @abstract Method uset to add patterns to patterns container
+ @discussion If pattern has been added earlier the same patter will not be added again
+ */
+- (void)addPatterns:(NSArray *)patterns;
+
+/**
  @define Remove pattern from validator
  @abstract Method used to remove existing pattern
  */

@@ -80,6 +80,17 @@
     XCTAssertEqual(_validator.patterns.count, (NSUInteger)0, @"");
 }
 
+#pragma mark addPatterns:
+- (void)testThatPatternsShouldBeAdded {
+    [_validator addPatterns:@[_pattern1, _pattern2]];
+    XCTAssertEqual(_validator.patterns.count, (NSUInteger)2, @"");
+}
+
+- (void)testThatOnePatternShouldBeAdded {
+    [_validator addPatterns:@[_pattern1, _pattern1]];
+    XCTAssertEqual(_validator.patterns.count, (NSUInteger)1, @"");
+}
+
 
 #pragma mark removePattern:
 - (void)testThatPatternsShouldHaveZeroElementAfterRemove {
@@ -128,5 +139,6 @@
     TSStringValidatorItem *item = [TSStringValidatorItem itemWithString:@"abc" patternIdentifier:_pattern1.identifier allowsEmpty:NO];
     [_validator validateItem:item];
 }
+
 
 @end

@@ -41,6 +41,12 @@ static TSStringValidator *_validator = nil;
     }
 }
 
+- (void)addPatterns:(NSArray *)patterns {
+    for (TSStringValidatorPattern *p in patterns) {
+        [self addPattern:p];
+    }
+}
+
 - (void)removePattern:(TSStringValidatorPattern *)pattern {
     if (pattern) {
         BOOL exists = [self checkIfPatternWithIdentifierExists:pattern.identifier];
