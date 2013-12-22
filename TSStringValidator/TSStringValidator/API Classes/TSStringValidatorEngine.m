@@ -10,12 +10,12 @@
 
 @implementation TSStringValidatorEngine
 
-- (BOOL)validateString:(NSString *)string withPatternIdentifier:(NSString *)identifier {
-    if (!string || !identifier) return NO;
+- (BOOL)validateString:(NSString *)string withPattern:(NSString *)pattern {
+    if (!string || !pattern) return NO;
     
     NSError *error = nil;
     NSRegularExpression *regex = [[NSRegularExpression alloc]
-                                  initWithPattern:identifier
+                                  initWithPattern:pattern
                                   options:NSRegularExpressionCaseInsensitive
                                   error:&error];
     

@@ -12,8 +12,8 @@
 
 /** 
  @define validate string with pattern
- @abstract Method used to validate string with passed string value and pattern identifier. Return YES if valid, otherwise NO.
+ @abstract Method used to validate string with passed string value and pattern string (regular expression pattern). Return YES if valid, otherwise NO.
  */
-- (BOOL)validateString:(NSString *)string withPatternIdentifier:(NSString *)identifier;
+- (BOOL)validateString:(NSString *)string withPattern:(NSString *)pattern;
 
 @end

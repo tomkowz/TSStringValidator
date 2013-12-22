@@ -34,15 +34,15 @@
 }
 
 - (void)testThatValidationShouldReturnFalseIfStringNotExists {
-    XCTAssertFalse([_engine validateString:nil withPatternIdentifier:@""], @"");
+    XCTAssertFalse([_engine validateString:nil withPattern:@""], @"");
 }
 
 - (void)testThatValidationShouldReturnFalseIfPatterNotExists {
-    XCTAssertFalse([_engine validateString:@"string" withPatternIdentifier:nil], @"");
+    XCTAssertFalse([_engine validateString:@"string" withPattern:nil], @"");
 }
 
 - (void)testThatValidationShouldReturnTrue {
-    XCTAssertTrue([_engine validateString:@"string" withPatternIdentifier:@"[a-z]+"], @"");
+    XCTAssertTrue([_engine validateString:@"string" withPattern:@"[a-z]+"], @"");
 }
 
 @end

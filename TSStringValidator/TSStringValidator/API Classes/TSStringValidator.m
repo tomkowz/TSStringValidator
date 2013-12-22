@@ -74,7 +74,7 @@ static TSStringValidator *_validator = nil;
         result = item.allowsEmpty ? StringValidationResultOK : StringValidationResultEmptyField;
     } else {
         TSStringValidatorPattern *pattern = [self _patternForIdentifier:item.patternIdentifier];
-        BOOL valid = [_engine validateString:item.stringValue withPatternIdentifier:pattern.patternString];
+        BOOL valid = [_engine validateString:item.stringValue withPattern:pattern.patternString];
         if (valid) result = StringValidationResultOK;
     }
     return result;
