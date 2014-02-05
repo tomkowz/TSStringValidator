@@ -9,12 +9,12 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Tomasz Szulc" => "szulctomasz@me.com" }
   s.source       = { :git => "https://github.com/tomkowz/TSStringValidator.git", :tag => '1.0.0' }
+  s.source_files = 'Classes/*.{h.m}'
 
   s.requires_arc = true
   
   s.platform     = :ios, '6.0'
   s.ios.deployment_target = '6.0'
   
-  s.source_files = 'Classes'
   
 end
