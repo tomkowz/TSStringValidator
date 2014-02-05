@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author             = { "Tomasz Szulc" => "szulctomasz@me.com" }
   s.social_media_url = "http://twitter.com/tomkowz"
 
-  s.source       = { :git => "https://github.com/tomkowz/TSStringValidator.git", :commit => "f2e9fc04ffa9b8475d45bbadf8f4825f39600d89" }
+  s.source       = { :git => "https://github.com/tomkowz/TSStringValidator.git", :commit => "084f47bc9883431322b4b9ad4e25f4b085093d49" }
 
   s.source_files  = 'Classes', 'Classes/**/*.{h,m}'
   s.exclude_files = 'Classes/Exclude'
