@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage     = "http://github.com/tomkowz/TSStringValidator"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Tomasz Szulc" => "szulctomasz@me.com" }
-  s.source       = { :git => "https://github.com/tomkowz/TSStringValidator.git", :commit => "e02f9b33922f828795ff2ef0256a2ec8f808fbfb" }
+  s.source       = { :git => "https://github.com/tomkowz/TSStringValidator.git", :commit => "f2e9fc04ffa9b8475d45bbadf8f4825f39600d89" }
 
   s.requires_arc = true
   
