@@ -6,10 +6,10 @@ Pod::Spec.new do |s|
   				   Couple of classes which allows you to simply validate strings in the project.
                    DESC
   s.homepage     = "http://github.com/tomkowz/TSStringValidator"
-  s.license      = 'MIT'
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Tomasz Szulc" => "szulctomasz@me.com" }
-  s.source       = { :git => "https://github.com/tomkowz/TSStringValidator.git", :commit => '2be378282cb35ce86e741814f58321c4c79e3978'}
-  s.source_files = 'Classes/*.{h.m}'
+  s.source       = { :git => "https://github.com/tomkowz/TSStringValidator.git", :commit => "2be378282cb35ce86e741814f58321c4c79e3978"}
+  s.source_files = "Classes/*.{h.m}"
 
   s.requires_arc = true
   
