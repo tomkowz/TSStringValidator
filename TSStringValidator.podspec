@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '6.0'
   s.ios.deployment_target = '6.0'
   
-  s.source_files = 'TSStringValidator/API\ Classes/'
+  s.source_files = 'Classes'
   
 end
