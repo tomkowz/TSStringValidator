@@ -1,9 +1,7 @@
 Pod::Spec.new do |s|
-
   s.name         = "TSStringValidator"
   s.version      = "1.0.0"
-  s.summary      = "TSStringValidator - Valid your strings in the simpliest way."
-
+  s.summary      = "Couple of classes which you can simply use to validate strings in the project."
   s.homepage     = "http://github.com/tomkowz/TSStringValidator"
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -11,9 +9,9 @@ Pod::Spec.new do |s|
   s.author             = { "Tomasz Szulc" => "szulctomasz@me.com" }
   s.social_media_url = "http://twitter.com/tomkowz"
 
-  s.source       = { :git => "https://github.com/tomkowz/TSStringValidator.git", :commit => "084f47bc9883431322b4b9ad4e25f4b085093d49" }
+  s.source       = { :git => "https://github.com/tomkowz/TSStringValidator.git", :tag => "1.0.0" }
 
-  s.source_files  = 'Classes', 'Classes/**/*.{h,m}'
-  s.exclude_files = 'Classes/Exclude'
-
+  s.platform	 = :ios, '6.0'
+  s.source_files = 'Classes/*'
+  s.requires_arc = true
 end
