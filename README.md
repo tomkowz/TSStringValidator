@@ -3,6 +3,10 @@ TSStringValidator
 
 Couple of classes which you can simply use to validate strings in the project
 
+CocoaPods
+====================
+You can install it via Cocoapods.
+
 What's inside
 ==================
 
